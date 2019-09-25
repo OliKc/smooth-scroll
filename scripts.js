@@ -9,5 +9,4 @@ $(document).ready(function () {
             $('.navbar').removeClass('navbar-alt');
         }
     });
-
 });
