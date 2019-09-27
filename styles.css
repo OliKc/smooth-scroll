@@ -1,3 +1,8 @@
+:root {
+    --dark-color: 15,20,30;
+    --light-color: #dcdcdc;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +11,8 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: darkslategrey;
-    color: #dcdcdc;
+    background-color: var(--dark-color);
+    color: var(--light-color);
     height: 100vh;
     overflow: hidden;
     line-height: 1.5;
@@ -28,7 +33,7 @@ body {
     display: flex;
     width: 100%;
     height: 100px;
-    background: rgba(15, 20, 30, 0.8);
+    background-color: rgba(var(--dark-color), 0.8);
     transition: height .5s;
 }
 
@@ -55,7 +60,7 @@ body {
     text-transform: uppercase;
     font-size: 1.25rem;
     letter-spacing: 1px;
-    color: #dcdcdc;
+    color: var(--light-color);
 
 }
 
@@ -81,7 +86,7 @@ section p {
 }
 
 section#home {
-    background: url('https://images.unsplash.com/photo-1480380799266-582d808d748a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+    background: url('https://images.unsplash.com/photo-1448067686092-1f4f2070baae?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
 }
 
 section#about {
@@ -105,8 +110,8 @@ section a span {
     display: block;
     width: 25px;
     height: 25px;
-    border-left: 1px solid #fff;
-    border-bottom: 1px solid #fff;
+    border-left: 2px solid #fff;
+    border-bottom: 2px solid #fff;
     transform: rotate(-45deg);
     animation: scrl 2s infinite;
 }
@@ -123,6 +128,32 @@ section a span {
     40% {
         transform: rotate(-45deg) translate(0, 0);
     }
+}
+
+.topBtn {
+    position: fixed;
+    bottom: 2.5rem;
+    right: 2.5rem;
+    width: 50px;
+    height: 50px;
+    padding-top: 19px;
+    background-color: rgba(var(--dark-color), 0.9);
+    border: none;
+    text-align: center;
+    cursor: pointer;
+}
+
+.topBtn span {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+    transform: rotate(45deg);
+}
+
+.hidden {
+    display: none;
 }
 
 ::-webkit-scrollbar {
